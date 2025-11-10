@@ -90,13 +90,12 @@ footer {
 /* Заголовок категорії */
 .category strong {
   font-size: 1.5em;
-  margin-bottom: 10px;
 }
 
 /* Список кнопок */
 .category ul {
   display: flex;
-  margin: 50px 10px 10px 50px;
+  margin: 20px 10px 10px 50px;
   gap: 10px;
 }
 
