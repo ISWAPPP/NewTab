@@ -131,3 +131,48 @@ footer {
   background-color: #d0e1ff;
 }
 
+/* ======================= */
+/*  Адаптація під телефони */
+/* ======================= */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  #search {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  #searchInput, #searchBtn {
+    width: 90%;
+    border-radius: 5px;
+  }
+
+  #searchBtn {
+    border-left: 3px solid #ccc;
+  }
+
+  .category strong {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+
+  .category ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .category ul li a {
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 0.9em;
+    padding: 15px 5px;
+  }
+}
