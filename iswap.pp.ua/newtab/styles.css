@@ -1,0 +1,123 @@
+/* Обнулити відступи і маркери */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #ffff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  height: 100px;
+  background: #333;
+  padding: 20px 50px;
+}
+
+/* Пошуковик */
+#search {
+  display: flex;
+  justify-content: center;
+  margin: 30px 10px;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 500px;
+  border-radius: 5px 0 0 5px;
+  border: 3px solid #ccc;
+}
+
+#searchBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  height: 46px;
+  border: 3px solid #ccc;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+#searchBtn .icon {
+  width: 25px;
+  height: 25px;
+  transition: filter 0.3s;
+}
+
+#searchBtn:hover .icon {
+  filter: brightness(0) invert(1);
+}
+
+#shortcuts * {
+  list-style: none;
+}
+
+/* Контейнер категорій */
+#shortcuts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Окремі категорії */
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+/* Заголовок категорії */
+.category strong {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Список кнопок */
+.category ul {
+  display: flex;
+  gap: 10px;
+}
+
+/* Кнопки */
+.category ul li a {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+/* Іконки ліворуч від тексту */
+.category ul li a .icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+}
+
+.category ul li a:hover {
+  background-color: #d0e1ff;
+}
+
