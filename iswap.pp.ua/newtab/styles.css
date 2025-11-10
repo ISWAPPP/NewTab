@@ -117,6 +117,16 @@ footer {
   margin-right: 8px;
 }
 
+/* GitHub окремо */
+.category ul li a.github {
+  background-color: #333; /* темний фон */
+  color: #fff;            /* білий текст */
+}
+
+.category ul li a.github:hover {
+  background-color: #555; /* трохи світліше при ховері */
+}
+
 .category ul li a:hover {
   background-color: #d0e1ff;
 }
