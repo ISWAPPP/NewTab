@@ -1,9 +1,25 @@
+:root {
+  /* Світла тема */
+  --bg-color: #fff;
+  --text-color: #333;
+  --border-color: #333;
+  --invert: 0%;
+}
+
+:root.dark {
+  --bg-color: #333;
+  --text-color: #fff;
+  --border-color: #fff;
+  --invert: 100%;
+}
+
 /* Обнулити відступи і маркери */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   user-select: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 html, body {
@@ -12,7 +28,7 @@ html, body {
 
 body {
   font-family: system-ui, sans-serif;
-  background-color: #ffff;
+  background-color: var(--bg-color);
   color: #333;
   display: flex;
   flex-direction: column;
@@ -30,6 +46,16 @@ footer {
   padding: 20px 50px;
 }
 
+/* Кнопка темної теми */
+#theme-toggle {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 10px 12px;
+  border: 3px solid var(--border-color);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
 /* Пошуковик */
 #search {
   display: flex;
@@ -40,8 +66,10 @@ footer {
 #searchInput {
   padding: 10px;
   width: 500px;
+  color: var(--text-color);
   border-radius: 5px 0 0 5px;
-  border: 3px solid #ccc;
+  border: 3px solid var(--border-color);
+  background-color: var(--bg-color);
 }
 
 #searchBtn {
@@ -50,22 +78,19 @@ footer {
   justify-content: center;
   padding: 0 12px;
   height: 46px;
-  border: 3px solid #ccc;
+  border: 3px solid var(--border-color);
   border-left: none;
   border-radius: 0 5px 5px 0;
-  background-color: #ccc;
+  background-color: var(--bg-color);
   cursor: pointer;
 }
 
 #searchBtn .icon {
   width: 25px;
   height: 25px;
-  transition: filter 0.3s;
+  filter: invert(var(--invert));
 }
 
-#searchBtn:hover .icon {
-  filter: brightness(0) invert(1);
-}
 
 #shortcuts * {
   list-style: none;
@@ -90,6 +115,7 @@ footer {
 /* Заголовок категорії */
 .category strong {
   font-size: 1.5em;
+  color: var(--text-color)
 }
 
 /* Список кнопок */
@@ -109,7 +135,6 @@ footer {
   border-radius: 5px;
   text-decoration: none;
   color: #333;
-  transition: background-color 0.3s;
 }
 
 /* Іконки ліворуч від тексту */
