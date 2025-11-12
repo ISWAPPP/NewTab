@@ -48,6 +48,8 @@ footer {
   padding: 20px 50px;
 }
 
+/* DNS TOOLS */
+
 /* Кнопка темної теми */
 #theme-toggle {
   background-color: var(--bg-color);
