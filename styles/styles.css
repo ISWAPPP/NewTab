@@ -195,8 +195,7 @@ footer {
   margin: 20px 10px 10px 0;
   gap: 10px;
   flex-flow: row wrap;
-  width: 800px;
-  max-width: 85%;
+  max-width: 60%;
 }
 
 /* Кнопки */
@@ -218,14 +217,14 @@ footer {
   margin-right: 8px;
 }
 
-/* GitHub окремо */
+/* GitHub окремо*/
 .category ul li a.github {
-  background-color: #333; /* темний фон */
-  color: #fff;            /* білий текст */
+  background-color: #333;
+  color: #fff;
 }
 
 .category ul li a.github:hover {
-  background-color: #555; /* трохи світліше при ховері */
+  background-color: #555;
 }
 
 .category ul li a:hover {
