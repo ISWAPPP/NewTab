@@ -220,6 +220,18 @@ footer {
     justify-content: center;
     text-align: center;
   }
+
+  .wave {
+    width: 120%;
+    height: 100%;
+    position: fixed;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: -500px;
+    border-radius: 35%;
+    background: var(--bg-color);
+    animation: wave 15s infinite linear;
+  }
 }
 html, body {
   overflow: hidden;
