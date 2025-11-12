@@ -109,7 +109,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+  width: 100%;
 }
 
 /* Заголовок категорії */
@@ -121,8 +121,10 @@ footer {
 /* Список кнопок */
 .category ul {
   display: flex;
-  margin: 20px 10px 10px 50px;
+  justify-content: center;
+  margin: 20px 10px 10px 0;
   gap: 10px;
+  flex-flow: row wrap;
 }
 
 /* Кнопки */
@@ -178,16 +180,6 @@ footer {
 
   #searchBtn {
     margin: 3%;
-  }
-
-  .category strong {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-  }
-
-  .category ul {
-    flex-flow: row wrap;
-    gap: 10px;
   }
 
   .category ul li a {
