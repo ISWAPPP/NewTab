@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
   <script src="scripts/themes.js" defer></script>
   <script src="scripts/search.js" defer></script>
+  <script src="scripts/dig.js" defer></script>
   <title>Нова вкладка - ISWAPPP</title>
   <link rel="icon" type="image/x-icon" href="/images/telegram.svg">
 </head>
@@ -86,9 +87,15 @@
                     </ul>
                 </div>
             </li>
-        </ul>
+        </ul><script src="dig.js" defer></script>
+
     </section>
-    <div class="wrapper">
+    <section id="dig">
+        <input type="text" id="domain" placeholder="Введіть домен">
+        <button id="btnA">Перевірити A-записи</button>
+        <button id="btnNS">Перевірити NS-записи</button>
+    </section>
+        <div class="wrapper">
         <div class="wave"></div>
     </div>
   </main>

@@ -117,7 +117,8 @@ footer {
 /* Заголовок категорії */
 .category strong {
   font-size: 1.5em;
-  color: var(--text-color)
+  color: var(--text-color);
+  margin-top: 10px;
 }
 
 /* Список кнопок */
