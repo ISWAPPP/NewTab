@@ -31,7 +31,7 @@ html, body {
 body {
   font-family: system-ui, sans-serif;
   background-color: var(--bg-color);
-  color: #333;
+  color: var(--bg-color);
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
@@ -54,6 +54,7 @@ footer {
   align-items: center; /* центрує всю секцію */
   margin: 40px auto;
   width: 500px;
+  max-width: 85%;
   text-align: center;
 }
 
@@ -246,7 +247,7 @@ footer {
 }
 @keyframes wave {
   from { transform: rotate(0deg);}
-  from { transform: rotate(360deg);}
+  to { transform: rotate(360deg);}
 }
 
 
@@ -293,6 +294,5 @@ footer {
   }
 }
 html, body {
-  overflow: hidden;
   height: 100%;
 }
