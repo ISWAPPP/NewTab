@@ -108,12 +108,21 @@ footer {
 
 /* Кнопка темної теми */
 #theme-toggle {
+  max-width: 46px;
+  max-height: 46px;
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 10px 12px;
   border: 3px solid var(--border-color);
   border-radius: 100px;
   cursor: pointer;
+}
+
+#theme-toggle .icon {
+  max-width: 26px;
+  max-height: 26px;
+  margin: -3px -4px;
+  filter: invert(var(--invert));
 }
 
 /* Пошуковик */
@@ -235,12 +244,12 @@ footer {
   z-index: -1;
 }
 .wave {
-  width: 1500px;
-  height: 1400px;
+  width: 2500px;
+  height: 2400px;
   position: absolute;
   left: 50%;
-  margin-left: -500px;
-  margin-top: -500px;
+  margin-top: -2000px;
+  margin-left: -1000px;
   border-radius: 35%;
   background: var(--bg-color);
   animation: wave 15s infinite linear;
@@ -280,14 +289,18 @@ footer {
     text-align: center;
   }
 
+  .category ul {
+    max-width: 85%;
+  }
+
   .wave {
-    width: 120%;
-    height: 100%;
+    width: 200%;
+    height: 120%;
     position: fixed;
     top: 0;
     left: 50%;
     margin-left: -500px;
-    margin-top: -500px;
+    margin-top: -600px;
     border-radius: 35%;
     background: var(--bg-color);
     animation: wave 15s infinite linear;
