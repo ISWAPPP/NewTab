@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('btnDIG');
+  const domainInput = document.getElementById('domain_input');
+  const output = document.getElementById('output');
 
-  btn.addEventListener('click', async () => {
-
-    const domainInput = document.getElementById('domain_input');
+  // Виносимо основну логіку у функцію
+  const checkDNS = async () => {
     const domain = domainInput.value.trim();
-
-    const output = document.getElementById('output');
     output.innerHTML = '⏳ Перевіряємо...';
 
     if (!domain) {
@@ -34,17 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       output.innerHTML = `
         <div class="external-links">
-          
-          <!-- DNSCHECKER -->
           <span class="copy-btn" data-copy="${linkDNS}">📋</span>
           <a href="${linkDNS}" target="_blank">DNSChecker (A)</a>
-
           &nbsp;&nbsp;
-
-          <!-- SSLSHOPPER -->
           <span class="copy-btn" data-copy="${linkSSL}">📋</span>
           <a href="${linkSSL}" target="_blank">SSLShopper</a>
-
         </div>
 
         <h3>🔹 Результат для ${domain}</h3>
@@ -55,6 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (err) {
       output.innerHTML = '❌ Помилка під час перевірки DNS.';
       console.error(err);
+    }
+  };
+
+  // Клік по кнопці
+  btn.addEventListener('click', checkDNS);
+
+  // Натискання Enter у полі вводу
+  domainInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      checkDNS();
     }
   });
 
