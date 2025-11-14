@@ -104,7 +104,28 @@ footer {
   color: var(--text-color);
   word-wrap: break-word;
 }
+.external-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-right: 8px;
+  font-weight: bold;
+}
 
+.external-links a:hover {
+  text-decoration: underline;
+}
+
+.copy-btn {
+  cursor: pointer;
+  margin-right: 4px;
+  font-size: 18px;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.copy-btn:hover {
+  scale: 1.15;
+}
 
 /* Кнопка темної теми */
 #theme-toggle {
