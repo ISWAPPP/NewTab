@@ -123,27 +123,29 @@ footer {
   transition: 0.2s;
 }
 
-.copy-btn:hover {
-  scale: 1.15;
-}
-
 /* Кнопка темної теми */
-#theme-toggle {
+#theme-toggle, #sound-toggle {
   max-width: 46px;
   max-height: 46px;
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 10px 12px;
+  margin-right: 5px;
   border: 3px solid var(--border-color);
   border-radius: 100px;
   cursor: pointer;
+  filter: opacity(50%);
 }
 
-#theme-toggle .icon {
+#theme-toggle .icon, #sound-toggle .icon {
   max-width: 26px;
   max-height: 26px;
   margin: -3px -4px;
   filter: invert(var(--invert));
+}
+
+#theme-toggle:hover, #sound-toggle:hover {
+  filter: opacity(100%);
 }
 
 /* Пошуковик */
@@ -326,6 +328,10 @@ footer {
     border-radius: 35%;
     background: var(--bg-color);
     animation: wave 15s infinite linear;
+  }
+
+  #sound-toggle {
+    display: none;
   }
 }
 html, body {
