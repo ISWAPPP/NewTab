@@ -48,6 +48,30 @@ footer {
   padding: 20px 50px;
 }
 
+#editor-panel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: #1e1e1e;
+  color: white;
+  padding: 15px;
+  overflow-y: auto;
+  border-right: 2px solid #444;
+}
+
+#editor-panel input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#editor-panel button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
 #dnstools {
   display: flex;
   flex-direction: column;

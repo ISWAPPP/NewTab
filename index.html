@@ -8,11 +8,41 @@
   <script src="scripts/sounds.js" defer></script>
   <script src="scripts/search.js" defer></script>
   <script src="scripts/dig.js" defer></script>
+  <script src="scripts/customCatalog.js" defer></script>
   <title>Нова вкладка - ISWAPPP</title>
   <link rel="icon" type="image/x-icon" href="/images/telegram.svg">
 </head>
 <body>
- <main>
+    <div id="editor-panel">
+        <h3>Редагування каталогу</h3>
+    
+        <label>Назва розділу:</label>
+        <input type="text" id="categoryName">
+    
+        <label>Назва кнопки:</label>
+        <input type="text" id="itemName">
+    
+        <label>Посилання:</label>
+        <input type="text" id="itemUrl">
+    
+        <label>Іконка (шлях):</label>
+        <input type="text" id="itemIcon">
+    
+        <button id="addCategoryBtn">Додати розділ</button>
+        <button id="addItemBtn">Додати кнопку</button>
+        <button id="deleteCategoryBtn" style="background:#922; color:white;">
+            Видалити розділ
+        </button>
+        
+        <button id="deleteItemBtn" style="background:#722; color:white;">
+            Видалити кнопку
+        </button>
+        <button id="restoreDefaultBtn" style="background:#226; color:white;">
+            Встановити дефолтний каталог
+        </button>
+            
+    </div>    
+    <main>
     <section id="search">
         <button id="theme-toggle">
             <img src="images/moon.svg" alt="DarkMode" class="icon">
@@ -24,6 +54,7 @@
         <button id="searchBtn">
             <img src="images/search.svg" alt="Search" class="icon">
         </button>
+        
     </section>
     <section id="shortcuts">
         <ul>
@@ -109,5 +140,6 @@
         <div class="wave"></div>
     </div>
   </main>
+  
 </body>
 </html>
