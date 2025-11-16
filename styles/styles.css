@@ -124,7 +124,7 @@ footer {
 }
 
 /* Кнопка темної теми */
-#theme-toggle, #sound-toggle {
+#theme-toggle{
   max-width: 46px;
   max-height: 46px;
   background-color: var(--bg-color);
@@ -137,14 +137,14 @@ footer {
   filter: opacity(50%);
 }
 
-#theme-toggle .icon, #sound-toggle .icon {
+#theme-toggle .icon{
   max-width: 26px;
   max-height: 26px;
   margin: -3px -4px;
   filter: invert(var(--invert));
 }
 
-#theme-toggle:hover, #sound-toggle:hover {
+#theme-toggle:hover{
   filter: opacity(100%);
 }
 
