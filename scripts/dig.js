@@ -325,56 +325,76 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Стилі для покращеного відображення
   const style = document.createElement('style');
-  style.textContent = `
-    .result-header { 
-      background: #f8f9fa; 
-      padding: 10px; 
-      border-radius: 5px; 
-      margin-bottom: 15px; 
-    }
-    .service-info { 
-      margin: 15px 0; 
-      padding: 10px; 
-      background: #e8f4fd; 
-      border-radius: 5px; 
-    }
-    .external-links { 
-      margin: 15px 0; 
-    }
-    .external-links a { 
-      margin: 0 10px; 
-      text-decoration: none; 
-      color: #0066cc; 
-    }
-    .external-links a:hover { 
-      text-decoration: underline; 
-    }
-    .dns-section { 
-      margin: 10px 0; 
-      padding: 10px; 
-      border-left: 3px solid #0066cc; 
-      background: #f8f9fa; 
-    }
-    .security-records { 
-      margin: 15px 0; 
-      padding: 15px; 
-      background: #fff3cd; 
-      border-radius: 5px; 
-      border: 1px solid #ffeaa7; 
-    }
-    .copy-btn { 
-      cursor: pointer; 
-      margin-left: 5px; 
-      user-select: none; 
-    }
-    .copy-btn:hover { 
-      opacity: 0.7; 
-    }
-    #pingBox { 
-      font-size: 1.2em; 
-      font-weight: bold; 
-      color: #28a745; 
-    }
-  `;
-  document.head.appendChild(style);
+style.textContent = `
+  .result-header { 
+    background: var(--bg-color, #fff); 
+    padding: 10px; 
+    border-radius: 5px; 
+    margin-bottom: 15px; 
+    border: 1px solid var(--border-color, #333);
+  }
+  .service-info { 
+    margin: 15px 0; 
+    padding: 10px; 
+    background: var(--accent, linear-gradient(to top, #accbee 0%, #e7f0fd 100%)); 
+    border-radius: 5px; 
+    border: 1px solid var(--border-color, #333);
+    color: var(--text-color, #333);
+  }
+  .external-links { 
+    margin: 15px 0; 
+  }
+  .external-links a { 
+    margin: 0 10px; 
+    text-decoration: none; 
+    color: var(--text-color, #333); 
+  }
+  .external-links a:hover { 
+    text-decoration: underline; 
+    opacity: 0.8;
+  }
+  .dns-results h3 {
+    color: var(--text-color, #333);
+    border-bottom: 2px solid var(--border-color, #333);
+    padding-bottom: 5px;
+  }
+  .dns-section { 
+    margin-bottom: 6px; 
+    padding: 10px; 
+    border-left: 3px solid var(--border-color, #333); 
+    background: var(--bg-color, #fff); 
+    border-radius: 0 5px 5px 0;
+    color: var(--text-color, #333);
+    border: 1px solid var(--border-color, #333);
+  }
+  .dns-section b {
+    color: var(--text-color, #333);
+  }
+  .security-records { 
+    margin: 15px 0; 
+    padding: 15px; 
+    background: var(--accent, linear-gradient(to top, #accbee 0%, #e7f0fd 100%)); 
+    border-radius: 5px; 
+    border: 1px solid var(--border-color, #333); 
+    color: var(--text-color, #333);
+  }
+  .security-records h4 {
+    color: var(--text-color, #333);
+    margin-top: 0;
+  }
+  .copy-btn { 
+    cursor: pointer; 
+    user-select: none; 
+  }
+  #pingBox { 
+    font-size: 1.2em; 
+    font-weight: bold; 
+    color: var(--text-color, #333); 
+  }
+  
+  /* Додаткові класи для тем */
+  .result-header, .dns-section, .service-info, .security-records {
+  }
+`;
+document.head.appendChild(style);
 });
